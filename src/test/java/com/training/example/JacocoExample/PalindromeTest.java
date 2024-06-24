@@ -55,6 +55,12 @@ public class PalindromeTest {
     }
 
     @Test
+    public void whenNotPalindromeWithSpecialCharacters_thenReject() {
+        Palindrome palindromeTester = new Palindrome();
+        assertFalse(palindromeTester.isPalindrome("abba"));
+    }
+
+    @Test
     public void whenNumericPalindrome_thenAccept() {
         Palindrome palindromeTester = new Palindrome();
         assertTrue(palindromeTester.isPalindrome("12321"));
